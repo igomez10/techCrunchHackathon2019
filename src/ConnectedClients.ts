@@ -14,12 +14,19 @@ class ConnectedClients {
 
   get connectedClients() {
     return this.clients.filter((client) => {
-       return Date.now() - client.lastPingAt < 30 * 1000
+       return Date.now() - client.lastPingAt < 3 * 1000
     })
   }
 
   public addClient(client: ConnectedClient) {
-    this.clients.push(client)
+    const existingClient = this.clients.find(c => {
+      return client.ip === c.ip
+    })
+    if(existingClient) {
+      existingClient.lastPingAt = client.lastPingAt
+    } else {
+      this.clients.push(client)
+    }
   }
 }
 
