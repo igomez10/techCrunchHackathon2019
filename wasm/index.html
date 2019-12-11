@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="wasm_exec.js"></script>
+		<script>
+			const go = new Go();
+			WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+				go.run(result.instance);
+			});
+		</script>
+	</head>
+	<body>
+    <h1>Running WASM</h1>
+    <div id="mock" style="background:gray">
+
+    </div>
+  </body>
+</html>
