@@ -1,5 +1,5 @@
 import Router from 'koa-router'
-import ConnectedClients from './connectedClients'
+import ConnectedClients from './ConnectedClients'
 import CurrentJob from './CurrentJob'
 import * as shortid from 'shortid'
 import * as fs from 'fs'
