@@ -1,0 +1,37 @@
+Arguments: 
+  /Users/olivier.ramier/.nvm/versions/node/v12.10.0/bin/node /Users/olivier.ramier/.nvm/versions/node/v12.10.0/bin/yarn add koa
+
+PATH: 
+  /Users/olivier.ramier/anaconda3/bin:/Users/olivier.ramier/anaconda3/condabin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/olivier.ramier/Library/Python/2.7/bin:/Users/olivier.ramier/.nvm/versions/node/v12.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/olivier.ramier/work/scripts:/Users/olivier.ramier/.rvm/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  12.10.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onStreamRead (internal/stream_base_commons.js:201:27)
+
+npm manifest: 
+  {
+    "name": "hackathon-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
