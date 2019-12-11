@@ -1,15 +1,11 @@
-import Router from 'koa-router'
-import serve from 'koa-static'
+// // import Router from 'koa-router'
 
-const router = new Router();
-console.log(__dirname)
 
-router.get('/*', serve(__dirname + '/../app/build'))
+// // router.get('/*', serve(__dirname + '/../app/build'))
 
-// router.get('/', async (ctx) => {
-//   console.log('hi')
-// })
+// // router.get('/', async (ctx) => {
+// //   console.log('hi')
+// // })
 
-router.get('/connect', serve(__dirname + '/../job'))
-
-export default router
+// const middleware = mount()
+// // export default middleware

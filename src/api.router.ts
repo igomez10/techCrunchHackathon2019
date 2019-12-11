@@ -33,7 +33,7 @@ router.post('/upload_binary', async (ctx, next) => {
   const file = ctx.request.files && ctx.request.files.file;
   if(!file) throw new Error('no file')
   const reader = fs.createReadStream(file.path);
-  const stream = fs.createWriteStream(path.join(__dirname, '/../job', Math.random().toString()));
+  const stream = fs.createWriteStream(path.join(__dirname, '/../wasm', 'main.wasm'));
   reader.pipe(stream);
   console.log('uploading %s -> %s', file.name, stream.path);
   // await setupNewJob(job)
