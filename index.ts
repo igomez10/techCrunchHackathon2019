@@ -1,4 +1,4 @@
 import { app } from './src/server'
-const port = 8000
+const port = 80
 app.listen(port)
 console.log(`Listening on http://localhost:${port}`)

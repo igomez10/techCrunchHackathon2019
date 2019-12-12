@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState } from 'react';
 import { Box, Stack, Text, Flex } from '@chakra-ui/core';
 import axios from 'axios'
+import { ClientMap } from './ClientMap'
 
 import Dropzone from 'react-dropzone'
 
@@ -23,7 +24,7 @@ function useInterval(callback, delay) {
 
 
 const fetchClientList = async () => {
-  const resp = await axios.get('http://localhost:8000/api/connected_clients')
+  const resp = await axios.get('/api/connected_clients')
   return resp.data
 }
 
@@ -35,24 +36,22 @@ export const ConnectedClientList = () => {
     setClientList(await fetchClientList());
   }, 2000);
 
-  return <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" width="100%" pt="1rem">
-    <Stack spacing={8} textAlign="center" width="36rem">
-      <Text fontSize="4xl">{clientList.length} Connected Devices</Text>
+  return <Box display="flex" flexDirection="row" alignItems="flex-start" justifyContent="space-around" width="100%" pt="1rem">
+
+<Stack spacing={8} textAlign="center" width="36rem">
+      <Text fontSize="4xl">{clientList.length} Available Instances</Text>
       <Stack>
       {clientList.map((client, idx) => <ConnectedClientViewer key={client.ip + idx} client={client} />)}
       </Stack>
-{/* 
-      <form action="http://localhost:8000/api/upload_binary" method="post" encType="multipart/form-data">
-        <input type="file" name="file" multiple/>
-        <input type="submit" value="Upload"/>
-      </form> */}
-
-      <Dropzone onDrop={acceptedFiles => {
+    </Stack>
+    <Box mt={16} mr={12} mb={4} width="36rem">
+      <Box mb={4}>
+    <Dropzone onDrop={acceptedFiles => {
         console.log(acceptedFiles)
         setFiles(acceptedFiles)
         const formData = new FormData();
         formData.append("file", acceptedFiles[0])
-        axios.post('http://localhost:8000/api/upload_binary', formData, {
+        axios.post('/api/upload_binary', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
@@ -60,15 +59,17 @@ export const ConnectedClientList = () => {
         }}>
       {({getRootProps, getInputProps}) => (
         <section>
-          <div {...getRootProps()}>
+          <Box {...getRootProps()} borderRadius={6} borderWidth={2} borderColor="gray.300" p={2}>
             <input {...getInputProps()} />
-              {files.map(file => <div key={file.path}>{file.path}</div>)}
-            {!files.length && <p>Drag 'n' drop some files here, or click to select files</p>}
-          </div>
+              {files.map(file => <Box textAlign="center" key={file.path}>{file.path}</Box>)}
+            {!files.length && <Box textAlign="center">Upload binary WebAssembly file</Box>}
+          </Box>
         </section>
       )}
       </Dropzone>
-    </Stack>
+      </Box>
+      <ClientMap clients={clientList}/>
+    </Box>
   </Box>
 }
 
