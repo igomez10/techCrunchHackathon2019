@@ -24,7 +24,7 @@ function useInterval(callback, delay) {
 
 
 const fetchClientList = async () => {
-  const resp = await axios.get('/api/connected_clients')
+  const resp = await axios.get('api/connected_clients')
   return resp.data
 }
 
