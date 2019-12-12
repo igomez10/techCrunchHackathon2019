@@ -28,6 +28,8 @@ github.com/shurcooL/go v0.0.0-20190704215121-7189cc372560 h1:SpaoQDTgpo2YZkvmr2m
 github.com/shurcooL/go v0.0.0-20190704215121-7189cc372560/go.mod h1:TDJrrUr11Vxrven61rcy3hJMUqaf/CLWYhHNPmT14Lk=
 github.com/shurcooL/go-goon v0.0.0-20170922171312-37c2f522c041 h1:llrF3Fs4018ePo4+G/HV/uQUqEI1HMDjCeOf2V6puPc=
 github.com/shurcooL/go-goon v0.0.0-20170922171312-37c2f522c041/go.mod h1:N5mDOmsrJOB+vfqUK+7DmDyjhSLIIBnXo9lvZJj3MWQ=
+github.com/shurcooL/goexec v0.0.0-20181215213458-76a6b9a99126 h1:DwrknIHyD6O682BNfrwbRh55wKTIKxzSQBTKIiK0998=
+github.com/shurcooL/goexec v0.0.0-20181215213458-76a6b9a99126/go.mod h1:0V15Gv9ZhqL5nNfb4X8CdLvnZv82NX7TkclWeAbwNrg=
 github.com/shurcooL/httpfs v0.0.0-20190707220628-8d4bc4ba7749 h1:bUGsEnyNbVPw06Bs80sCeARAlK8lhwqGyi6UT8ymuGk=
 github.com/shurcooL/httpfs v0.0.0-20190707220628-8d4bc4ba7749/go.mod h1:ZY1cvUeJuFPAdZ/B6v7RHavJWZn2YPVFQ1OSXhCGOkg=
 github.com/siongui/godom v0.0.0-20181006133514-8ba1cdb25192 h1:+H5lXLoRFOu/K/q8focJ8syTYjqEOaGwVJE6MpyKFPA=
@@ -59,6 +61,8 @@ golang.org/x/sys v0.0.0-20191210023423-ac6580df4449/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 golang.org/x/tools v0.0.0-20191210221141-98df12377212 h1:p0cPlrIZeu8wy/7Cyva+AvJjWtO3ehLV9TloLyItKIc=
 golang.org/x/tools v0.0.0-20191210221141-98df12377212/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
+golang.org/x/tools v0.0.0-20191212051200-825cb0626375 h1:hrBCt+pkb1irxFjg/GeadSn24gLxi5/Z861I53OkQbc=
+golang.org/x/tools v0.0.0-20191212051200-825cb0626375/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
 golang.org/x/xerrors v0.0.0-20190717185122-a985d3407aa7/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=

@@ -11,6 +11,7 @@ import (
 func main() {
 
 	go checkRunningLatestJob()
+	counter := 0
 
 	for {
 		//fmt.Println(time.Now().UnixNano())
@@ -35,8 +36,11 @@ func main() {
 
 		mock.Call("appendChild", p)
 		//fmt.Println(string(body))
-	}
 
+		counter += int(time.Now().UnixNano()) / 1000000000
+		counterElement := document.Call("getElementById", "opcounter")
+		counterElement.Set("innerHTML", fmt.Sprintf("%d", counter))
+	}
 }
 
 func checkRunningLatestJob() {

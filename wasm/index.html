@@ -1,17 +1,21 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<script src="connect/wasm_exec.js"></script>
+		<script src="wasm_exec.js"></script>
 		<script>
 			const go = new Go();
-			WebAssembly.instantiateStreaming(fetch("connect/main.wasm"), go.importObject).then((result) => {
+			WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
 				go.run(result.instance);
 			});
 		</script>
 	</head>
 	<body>
-    <h1>Running WASM</h1>
-    <div id="mock" style="background:gray">
+    <h1>Running WASM Task Billing account 9187309</h1>
+    <div>
+      <h4>Number of computations</h4>
+      <h4 id="opcounter">initial</h4>
+    </div>
+    <div id="mock" style="background:gray;overflow: scroll;height: 70%;max-height: 70%;">
 
     </div>
   </body>
