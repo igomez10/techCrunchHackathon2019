@@ -10,7 +10,7 @@ const a = new Koa();
 a.use(serve(__dirname + '/../wasm'))
 
 const b = new Koa();
-b.use(serve(__dirname + '/../app/build'))
+b.use(serve(__dirname + '/../webapp/build'))
 
 const app = new Koa();
 app.use(koaBody({ multipart: true }));
